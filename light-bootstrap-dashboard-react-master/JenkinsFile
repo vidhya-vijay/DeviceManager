@@ -1,0 +1,45 @@
+pipeline{
+    
+    agent any
+	
+	tools{
+	  nodejs 'node' 
+    }
+	
+    stages{
+        stage('build'){
+            steps{
+                echo 'this is build step'
+				dir('light-bootstrap-dashboard-react-master'){
+                  sh 'npm install'
+				  sh 'npm ls'
+				}
+            } 
+        }
+		
+	    stage('docker-package'){
+	        agent any
+	        steps{
+	          echo 'Packaging DeviceManager app with docker'
+	          script{
+	            docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
+	                def workerImage = docker.build("vidhyag/devmanagerui:v${env.BUILD_ID}", "./light-bootstrap-dashboard-react-master")
+	                workerImage.push()
+	                workerImage.push("latest")
+	            }
+	          }
+	        }
+	    }
+    }
+    
+    post{
+        always{
+            echo 'This job is complete'
+            
+        }
+        failure{
+            echo 'failure'
+            
+        }
+    }
+}
