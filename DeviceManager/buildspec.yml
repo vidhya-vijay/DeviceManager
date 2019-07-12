@@ -24,7 +24,7 @@ phases:
       - cp ../target/deviceManager-0.0.1-SNAPSHOT.war deviceManager.war
       - cp ../appspec.yml .
       - ls -al
-      - tar -zcvf ../target/deviceManager.tar.gz *.*
+      - tar -zcvf ../target/deviceManager-0.0.1-SNAPSHOT.tar.gz deviceManager.tar.gz
       - cd ..
 artifacts:
   files:
