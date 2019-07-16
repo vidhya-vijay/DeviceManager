@@ -56,7 +56,7 @@ class Dashboard extends Component {
     let sParam = severityParam;
     if(sParam == undefined)
        sParam = '';
-    fetch("http://localhost:5000/messages?deviceName="+dParam+"&severity="+sParam)
+    fetch("http://172.31.25.153:8080/deviceManager/messages?deviceName="+dParam+"&severity="+sParam)
       .then(res => res.json())
       .then(
         (result) => {
@@ -83,7 +83,7 @@ class Dashboard extends Component {
     let deviceName = deviceParam;
     if(deviceName==undefined)
        deviceName=''
-    fetch("http://localhost:5000/device/stats?deviceName="+deviceName)
+    fetch("http://172.31.25.153:8080/deviceManager/device/stats?deviceName="+deviceName)
       .then(res => res.json())
       .then(
         (result) => {
@@ -140,7 +140,7 @@ class Dashboard extends Component {
     if(sParam == undefined)
        sParam = '';
 
-    fetch("http://localhost:5000/message/stats?deviceName="+dParam+"&severity="+sParam)
+    fetch("http://172.31.25.153:8080/deviceManager/message/stats?deviceName="+dParam+"&severity="+sParam)
       .then(res => res.json())
       .then(
         (result) => {

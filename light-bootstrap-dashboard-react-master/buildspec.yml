@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Just listing basic information about the environment
+      - npm -version
+      - pwd
+  build:
+    commands:
+      - echo Build started on `date`
+      - cd light-bootstrap-dashboard-react-master
+      - npm install
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Working on creating the tar ball with the WAR and AppSpec file for CodeDeploy
+      - mkdir appfiles
+      - cd appfiles
+      - pwd
+      - cp ../*.* .
+      - ls -al
+      - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz *.*
+      - cd ..
+artifacts:
+  files:
+# IMPORTANT
+# You have to use the tar.gz if you are manually executing CodeDeploy
+    - light-bootstrap-dashboard-react-master/light-bootstrap-dashboard-react-master.tar.gz
+# Use the individual files if you are using the CodeDeploy from CodePipeline
+# Reason is pipeline does not untar and errors out saying that the appspec file is not there
+#    - DeviceManager/appfiles/appspec.yml
+#    - DeviceManager/appfiles/deviceManager.war
+  discard-paths: yes
