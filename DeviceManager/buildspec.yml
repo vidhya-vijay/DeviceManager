@@ -21,6 +21,7 @@ phases:
       - echo Working on creating the tar ball with the WAR and AppSpec file for CodeDeploy
       - mkdir appfiles
       - cd appfiles
+      - pwd
       - cp ../target/deviceManager-0.0.1-SNAPSHOT.war deviceManager.war
       - cp ../appspec.yml .
       - ls -al
@@ -33,6 +34,6 @@ artifacts:
 #    - DeviceManager/target/deviceManager.tar.gz
 # Use the individual files if you are using the CodeDeploy from CodePipeline
 # Reason is pipeline does not untar and errors out saying that the appspec file is not there
-    - appfiles/appspec.yml
-    - appfiles/deviceManager.war
+    - DeviceManager/appfiles/appspec.yml
+    - DeviceManager/appfiles/deviceManager.war
   discard-paths: yes
