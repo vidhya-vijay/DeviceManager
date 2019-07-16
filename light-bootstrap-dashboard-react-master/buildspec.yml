@@ -21,7 +21,7 @@ phases:
       - mkdir appfiles
       - cd appfiles
       - pwd
-      - cp ../*.* .
+      - cp -R ../*.* .
       - ls -al
       - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz *.*
       - cd ..
