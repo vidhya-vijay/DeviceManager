@@ -30,9 +30,9 @@ artifacts:
   files:
 # IMPORTANT
 # You have to use the tar.gz if you are manually executing CodeDeploy
-    - DeviceManager/target/deviceManager.tar.gz
+#    - DeviceManager/target/deviceManager.tar.gz
 # Use the individual files if you are using the CodeDeploy from CodePipeline
 # Reason is pipeline does not untar and errors out saying that the appspec file is not there
-#    - appfiles/appspec.yml
-#    - appfiles/HelloWorld-1.war
+    - appfiles/appspec.yml
+    - appfiles/deviceManager.war
   discard-paths: yes
