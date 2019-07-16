@@ -1,2 +1,2 @@
 # DeviceManager
-CMAD project repo
+CMAD project repoitory
