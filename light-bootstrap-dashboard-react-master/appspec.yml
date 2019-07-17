@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/website #where to store the artifacts
+    destination: /var/www/html
 hooks:
   ApplicationStart:
-    - location: /bin/start.sh #start script for the website
+    - location: /bin/start.sh
       timeout: 300
       runas: root
