@@ -21,9 +21,12 @@ phases:
       - mkdir appfiles
       - cd appfiles
       - pwd
-      - cp -R ../*.* .
+      - cp -R ../public .
+      - cp -R ../src .
+      - cp ../appspec.yml .
+      - cp ../package.json .
       - ls -al
-      - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz *.*
+      - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz .
       - cd ..
 artifacts:
   files:
