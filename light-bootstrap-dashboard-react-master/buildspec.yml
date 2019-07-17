@@ -23,6 +23,7 @@ phases:
       - pwd
       - cp -R ../public .
       - cp -R ../src .
+      - cp -R ../bin .
       - cp ../appspec.yml .
       - cp ../package.json .
       - ls -al
