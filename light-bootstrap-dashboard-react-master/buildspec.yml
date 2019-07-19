@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 8
+      nodejs: 10
   pre_build:
     commands:
       - echo Just listing basic information about the environment
@@ -26,6 +26,7 @@ phases:
       - cp -R ../bin .
       - cp ../appspec.yml .
       - cp ../package.json .
+      - cp ../jsconfig.json .
       - ls -al
       - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz .
       - cd ..
