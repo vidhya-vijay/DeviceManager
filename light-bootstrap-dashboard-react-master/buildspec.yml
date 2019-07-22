@@ -26,7 +26,7 @@ phases:
       - cp -R ../bin .
       - cp ../appspec.yml .
       - cp ../package.json .
-      - cp ../
+      - cp ../jsconfig.json .
       - ls -al
       - tar -zcvf ../light-bootstrap-dashboard-react-master.tar.gz .
       - cd ..
