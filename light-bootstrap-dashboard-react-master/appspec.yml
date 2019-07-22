@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/apps/devicemanager
+hooks:
+  ApplicationStart:
+    - location: /bin/start.sh
+      timeout: 300
+      runas: root
