@@ -6,4 +6,5 @@ files:
 hooks:
   ApplicationStart:
     - location: /bin/start.sh
+      timeout: 800
       runas: root
