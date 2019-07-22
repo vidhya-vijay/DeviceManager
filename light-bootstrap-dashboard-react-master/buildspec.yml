@@ -34,9 +34,12 @@ artifacts:
   files:
 # IMPORTANT
 # You have to use the tar.gz if you are manually executing CodeDeploy
-    - light-bootstrap-dashboard-react-master/light-bootstrap-dashboard-react-master.tar.gz
+#    - light-bootstrap-dashboard-react-master/light-bootstrap-dashboard-react-master.tar.gz
 # Use the individual files if you are using the CodeDeploy from CodePipeline
 # Reason is pipeline does not untar and errors out saying that the appspec file is not there
-#    - DeviceManager/appfiles/appspec.yml
-#    - DeviceManager/appfiles/deviceManager.war
+    - light-bootstrap-dashboard-react-master/appfiles/appspec.yml
+    - light-bootstrap-dashboard-react-master/appfiles/public
+    - light-bootstrap-dashboard-react-master/appfiles/src
+    - light-bootstrap-dashboard-react-master/appfiles/package.json
+    - light-bootstrap-dashboard-react-master/appfiles/jsconfig.json
   discard-paths: yes
