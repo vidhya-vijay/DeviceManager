@@ -3,3 +3,5 @@
 cd /var/apps/devicemanager
 tar -zxvf light-bootstrap-dashboard-react-master.tar.gz
 npm install
+npm stop
+npm start
