@@ -42,4 +42,5 @@ artifacts:
     - light-bootstrap-dashboard-react-master/appfiles/src
     - light-bootstrap-dashboard-react-master/appfiles/package.json
     - light-bootstrap-dashboard-react-master/appfiles/jsconfig.json
+    - light-bootstrap-dashboard-react-master/appfiles/bin
   discard-paths: yes
