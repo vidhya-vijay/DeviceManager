@@ -5,6 +5,6 @@ files:
     destination: /var/apps/devicemanager
 hooks:
   ApplicationStart:
-    - location: /bin/start.sh
+    - location: /start.sh
       timeout: 800
       runas: root
