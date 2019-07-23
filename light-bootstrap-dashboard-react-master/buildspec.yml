@@ -38,9 +38,9 @@ artifacts:
 # Use the individual files if you are using the CodeDeploy from CodePipeline
 # Reason is pipeline does not untar and errors out saying that the appspec file is not there
     - light-bootstrap-dashboard-react-master/appfiles/appspec.yml
-    - light-bootstrap-dashboard-react-master/appfiles/public
-    - light-bootstrap-dashboard-react-master/appfiles/src
+    - light-bootstrap-dashboard-react-master/appfiles/public/*
+    - light-bootstrap-dashboard-react-master/appfiles/src/*
     - light-bootstrap-dashboard-react-master/appfiles/package.json
     - light-bootstrap-dashboard-react-master/appfiles/jsconfig.json
-    - light-bootstrap-dashboard-react-master/appfiles/bin
+    - light-bootstrap-dashboard-react-master/appfiles/bin/*
   discard-paths: yes
